@@ -45,7 +45,7 @@ public class HelloController {
         String tableName = language.equals("English") ? "product_en" : "product_fr";
         ObservableList<Product> products = FXCollections.observableArrayList();
 
-        try (Connection connection = DriverManager.getConnection("jdbc:mariadb://localhost:3306/db_homeassignment", "root", "Uixu4iso");
+        try (Connection connection = DriverManager.getConnection("jdbc:mariadb://localhost:3306/db_homeassignment", "root", "");
              Statement statement = connection.createStatement();
              ResultSet resultSet = statement.executeQuery("SELECT * FROM " + tableName)) {
 
